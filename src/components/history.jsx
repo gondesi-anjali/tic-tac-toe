@@ -9,7 +9,7 @@ const Hist = ({ history, moveto, move }) => {
               className={`btn-move ${move === index ? 'active' : ''}`}
               onClick={() => moveto(index)}
             >
-              {index === 0 ? 'NEW GAME' : `GO TO MOVE #${index}`}
+              {index === 0 ? 'GO TO GAME START' : `GO TO MOVE #${index}`}
             </button>
           </li>
         ))}

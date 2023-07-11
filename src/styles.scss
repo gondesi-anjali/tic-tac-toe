@@ -1,6 +1,7 @@
 $green: #12e177;
 $orange: #ffc72a;
 $blue: #4c43d4;
+$magenta: #ff00ee;
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -24,6 +25,13 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.text-magenta {
+  border: 5px dashed magenta;
+
+  background-color: aqua;
+  color: $magenta;
 }
 
 .text-green {

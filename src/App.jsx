@@ -4,6 +4,7 @@ import './styles.scss';
 import { calcWinner } from './components/winner';
 import Drawmatch from './components/drawmatch';
 import Hist from './components/history';
+const newgame = [{ squares: Array(9).fill(null), player: false }];
 function App() {
   // const [squares, setSquares] = useState(Array(9).fill(null));
   // const [player, setplayer] = useState(false);
@@ -42,11 +43,24 @@ function App() {
   const moveto = mov => {
     setmove(mov);
   };
-
+  const newgamestart = () => {
+    sethistory(newgame);
+    setmove(0);
+  };
   return (
     <div className="app">
+      <h1>
+        <span className="text-magenta">TIC-TAC-TOE</span>
+      </h1>
       <Drawmatch winner={winner} gameboard={gameboard} />
       <Board squares={gameboard.squares} sqclick={sqclick} />
+      <button
+        type="button"
+        onClick={newgamestart}
+        className={`btn-reset ${winner ? 'active' : ''}`}
+      >
+        START NEW GAME
+      </button>
       <Hist history={history} moveto={moveto} move={move} />
     </div>
   );

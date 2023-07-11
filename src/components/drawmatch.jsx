@@ -18,13 +18,13 @@ const Drawmatch = ({ winner, gameboard }) => {
     }
     if (!winner && !nomoves) {
       return (
-        <h2>
+        <h3>
           NEXT PLAYER IS{' '}
           <span className={player ? 'text-green' : 'text-orange'}>
             {' '}
             {nextplayer}
           </span>
-        </h2>
+        </h3>
       );
     }
     return null;
